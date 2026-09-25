@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Footer from "./footer";
 
 export default function Page() {
     return (
@@ -29,7 +30,23 @@ export default function Page() {
                 <Link href={"/components/holographic"} className="styles">
                     Holographic
                 </Link>
+                <Link href={"/components/retro"} className="styles">
+                    Retro/Y2K
+                </Link>
+                <Link href={"/components/dark"} className="styles">
+                    Dark
+                </Link>
+                <Link href={"/components/flat"} className="styles">
+                    Flat
+                </Link>
+                <Link href={"/components/aurora"} className="styles">
+                    Aurora
+                </Link>
+                <Link href={"/components/editorial"} className="styles">
+                    Editorial
+                </Link>
             </div>
+            <Footer />
         </div>
     );
 }

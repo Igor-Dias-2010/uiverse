@@ -1,0 +1,451 @@
+.page {
+    min-height: 100vh;
+    min-width: 100vw;
+    background: #faf8f3;
+    font-family: "Georgia", "Times New Roman", serif;
+    color: #1a1a1a;
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 64px 24px 40px;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+.eyebrow {
+    margin: 0 0 18px;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #b3261e;
+}
+
+.hero h1 {
+    margin: 0 0 16px;
+    font-size: 3rem;
+    font-weight: 700;
+    font-style: italic;
+    line-height: 1.1;
+    color: #1a1a1a;
+}
+
+.hero p {
+    margin: 0 auto;
+    max-width: 480px;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 1rem;
+    color: #5c5850;
+    line-height: 1.6;
+}
+
+/* ---------- Layout ---------- */
+
+.content {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 48px 24px 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border-top: 1px solid #d8d3c6;
+    padding-top: 28px;
+}
+
+.section h2 {
+    margin: 0;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #9a9589;
+}
+
+/* ---------- Buttons ---------- */
+
+.buttons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.primaryButton {
+    padding: 12px 30px;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #faf8f3;
+    border: 1px solid #1a1a1a;
+    border-radius: 0;
+    background: #1a1a1a;
+    cursor: pointer;
+    transition:
+        background 0.15s ease,
+        color 0.15s ease;
+}
+
+.primaryButton:hover {
+    background: #b3261e;
+    border-color: #b3261e;
+}
+
+.secondaryButton {
+    padding: 11px 0;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #1a1a1a;
+    border: none;
+    border-bottom: 2px solid #1a1a1a;
+    background: transparent;
+    cursor: pointer;
+    transition:
+        color 0.15s ease,
+        border-color 0.15s ease;
+}
+
+.secondaryButton:hover {
+    color: #b3261e;
+    border-color: #b3261e;
+}
+
+/* ---------- Card ---------- */
+
+.card {
+    border-top: 3px solid #1a1a1a;
+    padding-top: 18px;
+}
+
+.cardCategory {
+    margin: 0 0 8px;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #b3261e;
+}
+
+.cardTitle {
+    margin: 0 0 10px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.25;
+    color: #1a1a1a;
+}
+
+.cardText {
+    margin: 0;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.95rem;
+    color: #5c5850;
+    line-height: 1.7;
+}
+
+/* ---------- Input ---------- */
+
+.input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 2px;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.95rem;
+    color: #1a1a1a;
+    border: none;
+    border-bottom: 1px solid #1a1a1a;
+    border-radius: 0;
+    background: transparent;
+    outline: none;
+    transition: border-color 0.15s ease;
+}
+
+.input::placeholder {
+    color: #9a9589;
+}
+
+.input:focus {
+    border-bottom: 2px solid #b3261e;
+}
+
+/* ---------- Checkbox ---------- */
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.92rem;
+    color: #1a1a1a;
+    cursor: pointer;
+}
+
+.checkbox input[type="checkbox"] {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    border: 1px solid #1a1a1a;
+    border-radius: 0;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    transition: background 0.15s ease;
+}
+
+.checkbox input[type="checkbox"]:checked {
+    background: #1a1a1a;
+}
+
+.checkbox input[type="checkbox"]:checked::after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 1px;
+    width: 4px;
+    height: 9px;
+    border: solid #faf8f3;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* ---------- Toggle ---------- */
+
+.toggle {
+    display: inline-block;
+    position: relative;
+    width: 44px;
+    height: 22px;
+    cursor: pointer;
+}
+
+.toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle span {
+    position: absolute;
+    inset: 0;
+    border-radius: 0;
+    background: transparent;
+    border: 1px solid #1a1a1a;
+    transition: background 0.15s ease;
+}
+
+.toggle span::before {
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    width: 16px;
+    height: 16px;
+    background: #1a1a1a;
+    transition:
+        transform 0.15s ease,
+        background 0.15s ease;
+}
+
+.toggle input:checked + span {
+    background: #1a1a1a;
+}
+
+.toggle input:checked + span::before {
+    transform: translateX(20px);
+    background: #b3261e;
+}
+
+/* ---------- Badge ---------- */
+
+.badge {
+    display: inline-block;
+    padding: 4px 12px;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #faf8f3;
+    background: #b3261e;
+    border-radius: 0;
+}
+
+/* ---------- Alert ---------- */
+
+.alert {
+    padding: 18px 20px;
+    border-left: 3px solid #b3261e;
+    background: #f2ede0;
+}
+
+.alert strong {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.alert p {
+    margin: 0;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.88rem;
+    color: #5c5850;
+}
+
+/* ---------- Progress ---------- */
+
+.progress {
+    width: 100%;
+    height: 2px;
+    background: #d8d3c6;
+}
+
+.progressBar {
+    width: 62%;
+    height: 100%;
+    background: #1a1a1a;
+}
+
+/* ---------- Select ---------- */
+
+.select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 20px 12px 2px;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.95rem;
+    color: #1a1a1a;
+    border: none;
+    border-bottom: 1px solid #1a1a1a;
+    border-radius: 0;
+    background:
+        linear-gradient(45deg, transparent 50%, #1a1a1a 50%) calc(100%) center /
+            6px 6px no-repeat,
+        linear-gradient(135deg, #1a1a1a 50%, transparent 50%) calc(100% - 6px)
+            center / 6px 6px no-repeat,
+        transparent;
+    appearance: none;
+    cursor: pointer;
+    transition: border-color 0.15s ease;
+}
+
+.select:focus {
+    border-bottom: 2px solid #b3261e;
+    outline: none;
+}
+
+/* ---------- Modal ---------- */
+
+.modal {
+    max-width: 420px;
+    margin: 0 auto;
+    padding: 30px;
+    background: #ffffff;
+    border: 1px solid #1a1a1a;
+    text-align: left;
+}
+
+.modalCategory {
+    margin: 0 0 10px;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #b3261e;
+}
+
+.modal h3 {
+    margin: 0 0 12px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1.25;
+    color: #1a1a1a;
+}
+
+.modal p {
+    margin: 0 0 22px;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.92rem;
+    color: #5c5850;
+    line-height: 1.7;
+}
+
+/* ---------- Tooltip ---------- */
+
+.tooltip {
+    padding: 10px 4px;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.88rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #1a1a1a;
+    border: none;
+    border-bottom: 1px dotted #1a1a1a;
+    background: transparent;
+    cursor: help;
+}
+
+/* ---------- Pagination ---------- */
+
+.pagination {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.pagination button {
+    padding: 4px 2px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #9a9589;
+    border: none;
+    border-bottom: 2px solid transparent;
+    background: transparent;
+    cursor: pointer;
+    transition:
+        color 0.15s ease,
+        border-color 0.15s ease;
+}
+
+.pagination button:hover {
+    color: #1a1a1a;
+}
+
+.activePage {
+    color: #1a1a1a !important;
+    border-bottom: 2px solid #b3261e !important;
+}
+
+/* ---------- Footer ---------- */
+
+.footer {
+    text-align: center;
+    padding: 28px;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.78rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #9a9589;
+    border-top: 1px solid #1a1a1a;
+}

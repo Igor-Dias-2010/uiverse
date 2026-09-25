@@ -1,0 +1,457 @@
+.page {
+    min-height: 100vh;
+    min-width: 100vw;
+    background: #0d1117;
+    font-family: -apple-system, "Segoe UI", "Inter", Arial, sans-serif;
+    color: #e6edf3;
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+    text-align: center;
+    padding: 56px 24px 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.title {
+    margin: 0 0 10px;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #f0f6fc;
+    letter-spacing: -0.5px;
+}
+
+.description {
+    margin: 0;
+    font-size: 1rem;
+    color: #8b949e;
+}
+
+/* ---------- Layout ---------- */
+
+.content {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 32px 24px 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.sectionTitle {
+    margin: 0;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #6e7681;
+}
+
+/* ---------- Card (superfície elevada) ---------- */
+
+.card {
+    background: #161b22;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    padding: 22px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+}
+
+/* ---------- Buttons ---------- */
+
+.buttonGroup {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.button {
+    padding: 9px 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    background: #2f81f7;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.08) inset;
+    cursor: pointer;
+    transition:
+        background 0.15s ease,
+        transform 0.1s ease;
+}
+
+.button:hover {
+    background: #4c94ff;
+}
+
+.button:active {
+    background: #2569c9;
+    transform: translateY(1px);
+}
+
+.buttonSecondary {
+    padding: 9px 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #e6edf3;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 8px;
+    background: #21262d;
+    cursor: pointer;
+    transition:
+        background 0.15s ease,
+        border-color 0.15s ease;
+}
+
+.buttonSecondary:hover {
+    background: #2d333b;
+    border-color: rgba(255, 255, 255, 0.22);
+}
+
+.buttonSecondary:active {
+    background: #1c2127;
+}
+
+/* ---------- Card text ---------- */
+
+.cardTitle {
+    margin: 0 0 8px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #f0f6fc;
+}
+
+.cardText {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #8b949e;
+    line-height: 1.6;
+}
+
+/* ---------- Label / Input ---------- */
+
+.label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #8b949e;
+}
+
+.input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 14px;
+    font-size: 0.92rem;
+    color: #e6edf3;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 8px;
+    background: #0d1117;
+    outline: none;
+    transition:
+        border-color 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+.input::placeholder {
+    color: #565d66;
+}
+
+.input:focus {
+    border-color: #2f81f7;
+    box-shadow: 0 0 0 3px rgba(47, 129, 247, 0.3);
+}
+
+/* ---------- Checkbox ---------- */
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.92rem;
+    color: #e6edf3;
+    cursor: pointer;
+}
+
+.checkbox input[type="checkbox"] {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    background: #0d1117;
+    cursor: pointer;
+    position: relative;
+    transition:
+        background 0.15s ease,
+        border-color 0.15s ease;
+}
+
+.checkbox input[type="checkbox"]:checked {
+    background: #2f81f7;
+    border-color: #2f81f7;
+}
+
+.checkbox input[type="checkbox"]:checked::after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 2px;
+    width: 4px;
+    height: 8px;
+    border: solid #ffffff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* ---------- Toggle ---------- */
+
+.toggle {
+    display: inline-block;
+    position: relative;
+    width: 42px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggleSlider {
+    position: absolute;
+    inset: 0;
+    border-radius: 999px;
+    background: #21262d;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.toggleSlider::before {
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #8b949e;
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+.toggle input:checked + .toggleSlider {
+    background: #2f81f7;
+    border-color: #2f81f7;
+}
+
+.toggle input:checked + .toggleSlider::before {
+    transform: translateX(18px);
+    background: #ffffff;
+}
+
+/* ---------- Badge ---------- */
+
+.badge {
+    display: inline-block;
+    padding: 4px 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #7ee787;
+    background: rgba(46, 160, 67, 0.15);
+    border: 1px solid rgba(46, 160, 67, 0.4);
+    border-radius: 999px;
+}
+
+/* ---------- Alert ---------- */
+
+.alert {
+    padding: 16px 20px;
+    border-radius: 8px;
+    background: rgba(210, 153, 34, 0.1);
+    border: 1px solid rgba(210, 153, 34, 0.35);
+}
+
+.alertTitle {
+    display: block;
+    margin-bottom: 4px;
+    color: #e3b341;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.alertText {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #c9a54f;
+}
+
+/* ---------- Progress ---------- */
+
+.progress {
+    width: 100%;
+    height: 8px;
+    border-radius: 999px;
+    background: #21262d;
+    overflow: hidden;
+}
+
+.progressBar {
+    width: 62%;
+    height: 100%;
+    border-radius: 999px;
+    background: #2f81f7;
+}
+
+/* ---------- Select ---------- */
+
+.select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 14px;
+    font-size: 0.92rem;
+    color: #e6edf3;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 8px;
+    background:
+        linear-gradient(45deg, transparent 50%, #8b949e 50%) calc(100% - 18px)
+            center / 6px 6px no-repeat,
+        linear-gradient(135deg, #8b949e 50%, transparent 50%) calc(100% - 12px)
+            center / 6px 6px no-repeat,
+        #0d1117;
+    appearance: none;
+    cursor: pointer;
+    transition: border-color 0.15s ease;
+}
+
+.select:focus {
+    border-color: #2f81f7;
+    outline: none;
+}
+
+.select option {
+    color: #e6edf3;
+    background: #161b22;
+}
+
+/* ---------- Modal ---------- */
+
+.modal {
+    max-width: 420px;
+    margin: 0 auto;
+    padding: 26px;
+    border-radius: 12px;
+    background: #1c2128;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.55);
+}
+
+.modalTitle {
+    margin: 0 0 10px;
+    color: #f0f6fc;
+    font-weight: 700;
+}
+
+.modalText {
+    margin: 0 0 22px;
+    font-size: 0.9rem;
+    color: #8b949e;
+    line-height: 1.6;
+}
+
+.modalActions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+/* ---------- Tooltip ---------- */
+
+.tooltip {
+    position: relative;
+    padding: 9px 20px;
+    font-size: 0.88rem;
+    color: #e6edf3;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 8px;
+    background: #21262d;
+    cursor: pointer;
+}
+
+.tooltipText {
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    padding: 6px 10px;
+    font-size: 0.75rem;
+    color: #e6edf3;
+    background: #30363d;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s ease;
+}
+
+.tooltip:hover .tooltipText {
+    opacity: 1;
+}
+
+/* ---------- Pagination ---------- */
+
+.pagination {
+    display: flex;
+    gap: 6px;
+}
+
+.pageButton {
+    width: 34px;
+    height: 34px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #8b949e;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 7px;
+    background: #161b22;
+    cursor: pointer;
+    transition:
+        background 0.15s ease,
+        color 0.15s ease,
+        border-color 0.15s ease;
+}
+
+.pageButton:hover {
+    background: #21262d;
+    color: #e6edf3;
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.pageButton:active {
+    background: #1c2127;
+}
+
+/* ---------- Footer ---------- */
+
+.footer {
+    text-align: center;
+    padding: 24px;
+    font-size: 0.82rem;
+    color: #6e7681;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}

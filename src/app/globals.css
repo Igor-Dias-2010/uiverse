@@ -15,29 +15,38 @@ nav {
     align-items: center;
     padding: 5px;
 }
+nav a {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding-inline: 10px;
+}
 a {
     color: black;
     text-decoration: none;
 }
-.styles-container{
+a:hover {
+    text-decoration: underline;
+}
+.styles-container {
     display: grid;
     grid-template-columns: 2fr 2fr;
     margin-top: 10px;
     gap: 10px;
 }
-.styles{
+.styles {
     padding: 10px;
     background-color: wheat;
     border: 2px solid black;
     border-radius: 10px;
     text-align: center;
 }
-.main{
+.main {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     scrollbar-width: none;
 }
