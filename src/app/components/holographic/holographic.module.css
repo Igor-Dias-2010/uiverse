@@ -1,0 +1,627 @@
+@keyframes holo-shift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.page {
+    min-height: 100vh;
+    min-width: 100vw;
+    background:
+        radial-gradient(
+            circle at 20% 15%,
+            rgba(124, 92, 255, 0.18) 0%,
+            transparent 45%
+        ),
+        radial-gradient(
+            circle at 85% 25%,
+            rgba(90, 209, 255, 0.15) 0%,
+            transparent 45%
+        ),
+        radial-gradient(
+            circle at 70% 85%,
+            rgba(255, 110, 199, 0.15) 0%,
+            transparent 45%
+        ),
+        #08070f;
+    font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    color: #f2f0ff;
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+    text-align: center;
+    padding: 64px 24px 44px;
+}
+
+.title {
+    margin: 0 0 10px;
+    font-size: 2.7rem;
+    font-weight: 800;
+    background: linear-gradient(
+        90deg,
+        #ff6ec7,
+        #7c5cff,
+        #5ad1ff,
+        #6effa3,
+        #ffe66d,
+        #ff6ec7
+    );
+    background-size: 300% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: holo-shift 6s ease infinite;
+}
+
+.description {
+    margin: 0;
+    font-size: 1rem;
+    color: rgba(242, 240, 255, 0.6);
+}
+
+/* ---------- Layout ---------- */
+
+.content {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 24px 24px 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.sectionTitle {
+    margin: 0;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: rgba(242, 240, 255, 0.45);
+}
+
+/* ---------- Card (vidro escuro com borda prismática) ---------- */
+
+.card {
+    position: relative;
+    background: linear-gradient(
+        165deg,
+        rgba(28, 24, 50, 0.9) 0%,
+        rgba(14, 12, 28, 0.9) 100%
+    );
+    border-radius: 22px;
+    padding: 26px;
+    border: 1px solid transparent;
+    background-clip: padding-box;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 22px;
+    padding: 1px;
+    background: linear-gradient(
+        120deg,
+        #ff6ec7,
+        #7c5cff,
+        #5ad1ff,
+        #6effa3,
+        #ffe66d,
+        #ff6ec7
+    );
+    background-size: 300% 300%;
+    animation: holo-shift 8s ease infinite;
+    -webkit-mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+/* ---------- Buttons ---------- */
+
+.buttonGroup {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.button {
+    padding: 13px 30px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #08070f;
+    border: none;
+    border-radius: 14px;
+    background: linear-gradient(
+        120deg,
+        #ff6ec7,
+        #7c5cff,
+        #5ad1ff,
+        #6effa3,
+        #ffe66d,
+        #ff6ec7
+    );
+    background-size: 300% 100%;
+    animation: holo-shift 5s ease infinite;
+    box-shadow: 0 10px 26px rgba(124, 92, 255, 0.4);
+    cursor: pointer;
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 32px rgba(124, 92, 255, 0.55);
+}
+
+.button:active {
+    transform: translateY(0);
+}
+
+.buttonSecondary {
+    position: relative;
+    padding: 13px 30px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #f2f0ff;
+    border: 1px solid transparent;
+    border-radius: 14px;
+    background:
+        linear-gradient(#0e0c1c, #0e0c1c) padding-box,
+        linear-gradient(
+                120deg,
+                #ff6ec7,
+                #7c5cff,
+                #5ad1ff,
+                #6effa3,
+                #ffe66d,
+                #ff6ec7
+            )
+            border-box;
+    background-size:
+        100% 100%,
+        300% 100%;
+    animation: holo-shift 5s ease infinite;
+    cursor: pointer;
+    transition: transform 0.15s ease;
+}
+
+.buttonSecondary:hover {
+    transform: translateY(-2px);
+}
+
+.buttonSecondary:active {
+    transform: translateY(0);
+}
+
+/* ---------- Card text ---------- */
+
+.cardTitle {
+    position: relative;
+    margin: 0 0 10px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #f2f0ff;
+}
+
+.cardText {
+    position: relative;
+    margin: 0;
+    font-size: 0.92rem;
+    color: rgba(242, 240, 255, 0.62);
+    line-height: 1.6;
+}
+
+/* ---------- Label / Input ---------- */
+
+.label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: rgba(242, 240, 255, 0.6);
+}
+
+.input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px 18px;
+    font-size: 0.95rem;
+    color: #f2f0ff;
+    border: 1px solid rgba(124, 92, 255, 0.35);
+    border-radius: 12px;
+    background: rgba(20, 18, 38, 0.75);
+    outline: none;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.input::placeholder {
+    color: rgba(242, 240, 255, 0.35);
+}
+
+.input:focus {
+    border-color: #7c5cff;
+    box-shadow:
+        0 0 0 3px rgba(124, 92, 255, 0.25),
+        0 0 18px rgba(90, 209, 255, 0.25);
+}
+
+/* ---------- Checkbox ---------- */
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.95rem;
+    color: #f2f0ff;
+    cursor: pointer;
+}
+
+.checkbox input[type="checkbox"] {
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    margin: 0;
+    border-radius: 7px;
+    background: rgba(20, 18, 38, 0.9);
+    border: 1px solid rgba(124, 92, 255, 0.4);
+    cursor: pointer;
+    position: relative;
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.checkbox input[type="checkbox"]:checked {
+    background: linear-gradient(120deg, #ff6ec7, #7c5cff, #5ad1ff);
+    border-color: transparent;
+    box-shadow: 0 0 14px rgba(124, 92, 255, 0.6);
+}
+
+.checkbox input[type="checkbox"]:checked::after {
+    content: "";
+    position: absolute;
+    left: 8px;
+    top: 4px;
+    width: 5px;
+    height: 10px;
+    border: solid #08070f;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* ---------- Toggle ---------- */
+
+.toggle {
+    display: inline-block;
+    position: relative;
+    width: 54px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggleSlider {
+    position: absolute;
+    inset: 0;
+    border-radius: 999px;
+    background: rgba(20, 18, 38, 0.9);
+    border: 1px solid rgba(124, 92, 255, 0.35);
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.toggleSlider::before {
+    content: "";
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: linear-gradient(160deg, #f2f0ff 0%, #cfc9ff 100%);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+    transition: transform 0.25s ease;
+}
+
+.toggle input:checked + .toggleSlider {
+    background: linear-gradient(
+        120deg,
+        #ff6ec7,
+        #7c5cff,
+        #5ad1ff,
+        #6effa3,
+        #ffe66d,
+        #ff6ec7
+    );
+    background-size: 300% 100%;
+    animation: holo-shift 4s ease infinite;
+    border-color: transparent;
+}
+
+.toggle input:checked + .toggleSlider::before {
+    transform: translateX(24px);
+}
+
+/* ---------- Badge ---------- */
+
+.badge {
+    display: inline-block;
+    padding: 7px 18px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #08070f;
+    background: linear-gradient(
+        120deg,
+        #ff6ec7,
+        #7c5cff,
+        #5ad1ff,
+        #6effa3,
+        #ffe66d,
+        #ff6ec7
+    );
+    background-size: 300% 100%;
+    animation: holo-shift 5s ease infinite;
+    border-radius: 999px;
+    box-shadow: 0 6px 16px rgba(124, 92, 255, 0.4);
+}
+
+/* ---------- Alert ---------- */
+
+.alert {
+    position: relative;
+    padding: 20px 24px;
+    border-radius: 18px;
+    background: linear-gradient(
+        165deg,
+        rgba(28, 24, 50, 0.9) 0%,
+        rgba(14, 12, 28, 0.9) 100%
+    );
+    border: 1px solid rgba(255, 230, 109, 0.35);
+    box-shadow:
+        0 12px 26px rgba(0, 0, 0, 0.4),
+        0 0 20px rgba(255, 230, 109, 0.12);
+}
+
+.alertTitle {
+    display: block;
+    margin-bottom: 6px;
+    color: #ffe66d;
+    font-size: 0.95rem;
+}
+
+.alertText {
+    margin: 0;
+    font-size: 0.9rem;
+    color: rgba(242, 240, 255, 0.65);
+}
+
+/* ---------- Progress ---------- */
+
+.progress {
+    width: 100%;
+    height: 16px;
+    border-radius: 999px;
+    background: rgba(20, 18, 38, 0.9);
+    border: 1px solid rgba(124, 92, 255, 0.3);
+    overflow: hidden;
+}
+
+.progressBar {
+    width: 62%;
+    height: 100%;
+    border-radius: 999px;
+    background: linear-gradient(
+        120deg,
+        #ff6ec7,
+        #7c5cff,
+        #5ad1ff,
+        #6effa3,
+        #ffe66d,
+        #ff6ec7
+    );
+    background-size: 300% 100%;
+    animation: holo-shift 4s ease infinite;
+    box-shadow: 0 0 16px rgba(124, 92, 255, 0.55);
+}
+
+/* ---------- Select ---------- */
+
+.select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px 18px;
+    font-size: 0.95rem;
+    color: #f2f0ff;
+    border: 1px solid rgba(124, 92, 255, 0.35);
+    border-radius: 12px;
+    background:
+        linear-gradient(45deg, transparent 50%, #cfc9ff 50%) calc(100% - 20px)
+            center / 6px 6px no-repeat,
+        linear-gradient(135deg, #cfc9ff 50%, transparent 50%) calc(100% - 14px)
+            center / 6px 6px no-repeat,
+        rgba(20, 18, 38, 0.75);
+    appearance: none;
+    cursor: pointer;
+}
+
+.select option {
+    color: #f2f0ff;
+    background: #14122a;
+}
+
+/* ---------- Modal ---------- */
+
+.modal {
+    position: relative;
+    max-width: 420px;
+    margin: 0 auto;
+    padding: 32px;
+    border-radius: 26px;
+    background: linear-gradient(
+        165deg,
+        rgba(28, 24, 50, 0.95) 0%,
+        rgba(10, 9, 20, 0.97) 100%
+    );
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);
+}
+
+.modal::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 26px;
+    padding: 1.5px;
+    background: linear-gradient(
+        120deg,
+        #ff6ec7,
+        #7c5cff,
+        #5ad1ff,
+        #6effa3,
+        #ffe66d,
+        #ff6ec7
+    );
+    background-size: 300% 300%;
+    animation: holo-shift 8s ease infinite;
+    -webkit-mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+.modalTitle {
+    position: relative;
+    margin: 0 0 12px;
+    color: #f2f0ff;
+    font-weight: 700;
+}
+
+.modalText {
+    position: relative;
+    margin: 0 0 24px;
+    font-size: 0.92rem;
+    color: rgba(242, 240, 255, 0.62);
+    line-height: 1.6;
+}
+
+.modalActions {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    gap: 14px;
+}
+
+/* ---------- Tooltip ---------- */
+
+.tooltip {
+    position: relative;
+    padding: 12px 24px;
+    font-size: 0.9rem;
+    color: #f2f0ff;
+    border: 1px solid rgba(124, 92, 255, 0.35);
+    border-radius: 12px;
+    background: rgba(20, 18, 38, 0.85);
+    cursor: pointer;
+}
+
+.tooltipText {
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    padding: 7px 14px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #08070f;
+    background: linear-gradient(
+        120deg,
+        #ff6ec7,
+        #7c5cff,
+        #5ad1ff,
+        #6effa3,
+        #ffe66d,
+        #ff6ec7
+    );
+    background-size: 300% 100%;
+    animation: holo-shift 4s ease infinite;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(124, 92, 255, 0.4);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s ease;
+}
+
+.tooltip:hover .tooltipText {
+    opacity: 1;
+}
+
+/* ---------- Pagination ---------- */
+
+.pagination {
+    display: flex;
+    gap: 12px;
+}
+
+.pageButton {
+    width: 42px;
+    height: 42px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #f2f0ff;
+    border: 1px solid rgba(124, 92, 255, 0.35);
+    border-radius: 12px;
+    background: rgba(20, 18, 38, 0.85);
+    cursor: pointer;
+    transition:
+        border-color 0.2s ease,
+        color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.pageButton:hover {
+    border-color: #7c5cff;
+    box-shadow: 0 0 14px rgba(124, 92, 255, 0.4);
+}
+
+.pageButton:active {
+    box-shadow: 0 0 18px rgba(90, 209, 255, 0.5);
+}
+
+/* ---------- Footer ---------- */
+
+.footer {
+    text-align: center;
+    padding: 28px;
+    font-size: 0.85rem;
+    color: rgba(242, 240, 255, 0.4);
+}

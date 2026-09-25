@@ -1,0 +1,481 @@
+.page {
+    min-height: 100vh;
+    min-width: 100vw;
+    background:
+        radial-gradient(circle at 15% 20%, #7c4dff 0%, transparent 45%),
+        radial-gradient(circle at 85% 15%, #00c2ff 0%, transparent 45%),
+        radial-gradient(circle at 75% 85%, #ff5ba0 0%, transparent 45%),
+        radial-gradient(circle at 20% 90%, #ffa54c 0%, transparent 40%),
+        linear-gradient(135deg, #5b34d9 0%, #3454d1 100%);
+    font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    color: #ffffff;
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+    text-align: center;
+    padding: 64px 24px 44px;
+}
+
+.title {
+    margin: 0 0 10px;
+    font-size: 2.6rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.25);
+}
+
+.description {
+    margin: 0;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+/* ---------- Layout ---------- */
+
+.content {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 24px 24px 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.sectionTitle {
+    margin: 0;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* ---------- Card (vidro fosco) ---------- */
+
+.card {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(18px) saturate(180%);
+    -webkit-backdrop-filter: blur(18px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* ---------- Buttons ---------- */
+
+.buttonGroup {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.button {
+    padding: 12px 28px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #1c1b33;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+    cursor: pointer;
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease,
+        background 0.15s ease;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+}
+
+.button:active {
+    transform: translateY(0);
+}
+
+.buttonSecondary {
+    padding: 12px 28px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition:
+        transform 0.15s ease,
+        background 0.15s ease;
+}
+
+.buttonSecondary:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.buttonSecondary:active {
+    transform: translateY(0);
+}
+
+/* ---------- Card text ---------- */
+
+.cardTitle {
+    margin: 0 0 10px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.cardText {
+    margin: 0;
+    font-size: 0.92rem;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.6;
+}
+
+/* ---------- Label / Input ---------- */
+
+.label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px 18px;
+    font-size: 0.95rem;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    outline: none;
+    transition:
+        border-color 0.15s ease,
+        background 0.15s ease;
+}
+
+.input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.input:focus {
+    border-color: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.16);
+}
+
+/* ---------- Checkbox ---------- */
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.95rem;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.checkbox input[type="checkbox"] {
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    margin: 0;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    cursor: pointer;
+    position: relative;
+    transition:
+        background 0.15s ease,
+        border-color 0.15s ease;
+}
+
+.checkbox input[type="checkbox"]:checked {
+    background: rgba(255, 255, 255, 0.85);
+    border-color: rgba(255, 255, 255, 0.9);
+}
+
+.checkbox input[type="checkbox"]:checked::after {
+    content: "";
+    position: absolute;
+    left: 8px;
+    top: 4px;
+    width: 5px;
+    height: 10px;
+    border: solid #3454d1;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* ---------- Toggle ---------- */
+
+.toggle {
+    display: inline-block;
+    position: relative;
+    width: 54px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggleSlider {
+    position: absolute;
+    inset: 0;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    transition: background 0.2s ease;
+}
+
+.toggleSlider::before {
+    content: "";
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+    transition: transform 0.2s ease;
+}
+
+.toggle input:checked + .toggleSlider {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+.toggle input:checked + .toggleSlider::before {
+    transform: translateX(24px);
+    background: #ffffff;
+}
+
+/* ---------- Badge ---------- */
+
+.badge {
+    display: inline-block;
+    padding: 7px 18px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 999px;
+}
+
+/* ---------- Alert ---------- */
+
+.alert {
+    padding: 20px 24px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.14);
+    backdrop-filter: blur(14px) saturate(180%);
+    -webkit-backdrop-filter: blur(14px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.alertTitle {
+    display: block;
+    margin-bottom: 6px;
+    color: #ffffff;
+    font-size: 0.95rem;
+}
+
+.alertText {
+    margin: 0;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+/* ---------- Progress ---------- */
+
+.progress {
+    width: 100%;
+    height: 16px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    overflow: hidden;
+}
+
+.progressBar {
+    width: 62%;
+    height: 100%;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
+}
+
+/* ---------- Select ---------- */
+
+.select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px 18px;
+    font-size: 0.95rem;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 14px;
+    background:
+        linear-gradient(45deg, transparent 50%, rgba(255, 255, 255, 0.7) 50%)
+            calc(100% - 20px) center / 6px 6px no-repeat,
+        linear-gradient(135deg, rgba(255, 255, 255, 0.7) 50%, transparent 50%)
+            calc(100% - 14px) center / 6px 6px no-repeat,
+        rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    appearance: none;
+    cursor: pointer;
+}
+
+.select option {
+    color: #1c1b33;
+    background: #ffffff;
+}
+
+/* ---------- Modal ---------- */
+
+.modal {
+    max-width: 420px;
+    margin: 0 auto;
+    padding: 32px;
+    border-radius: 26px;
+    background: rgba(255, 255, 255, 0.14);
+    backdrop-filter: blur(22px) saturate(180%);
+    -webkit-backdrop-filter: blur(22px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.28);
+}
+
+.modalTitle {
+    margin: 0 0 12px;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.modalText {
+    margin: 0 0 24px;
+    font-size: 0.92rem;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.6;
+}
+
+.modalActions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 14px;
+}
+
+/* ---------- Tooltip ---------- */
+
+.tooltip {
+    position: relative;
+    padding: 12px 24px;
+    font-size: 0.9rem;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    cursor: pointer;
+}
+
+.tooltipText {
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    padding: 7px 14px;
+    font-size: 0.8rem;
+    color: #ffffff;
+    background: rgba(20, 18, 40, 0.65);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s ease;
+}
+
+.tooltip:hover .tooltipText {
+    opacity: 1;
+}
+
+/* ---------- Pagination ---------- */
+
+.pagination {
+    display: flex;
+    gap: 12px;
+}
+
+.pageButton {
+    width: 42px;
+    height: 42px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    cursor: pointer;
+    transition:
+        background 0.15s ease,
+        transform 0.15s ease;
+}
+
+.pageButton:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.pageButton:active {
+    transform: translateY(0);
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* ---------- Footer ---------- */
+
+.footer {
+    text-align: center;
+    padding: 28px;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.55);
+}

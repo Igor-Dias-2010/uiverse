@@ -1,0 +1,492 @@
+.page {
+    min-height: 100vh;
+    min-width: 100vw;
+    background: radial-gradient(
+        circle at 15% 0%,
+        #f4efdf 0%,
+        #f7f2e6 40%,
+        #efe8d4 100%
+    );
+    font-family: "Nunito", "Segoe UI", Arial, sans-serif;
+    color: #4a3f35;
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+    position: relative;
+    text-align: center;
+    padding: 64px 24px 48px;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 420px;
+    height: 260px;
+    background: radial-gradient(
+        ellipse at center,
+        rgba(199, 143, 99, 0.18) 0%,
+        rgba(199, 143, 99, 0) 70%
+    );
+    border-radius: 50% 45% 55% 50% / 55% 50% 50% 45%;
+    z-index: 0;
+}
+
+.title {
+    position: relative;
+    margin: 0 0 12px;
+    font-size: 2.6rem;
+    font-weight: 800;
+    color: #6b4f3a;
+    z-index: 1;
+}
+
+.description {
+    position: relative;
+    margin: 0;
+    font-size: 1rem;
+    color: #8a7862;
+    z-index: 1;
+}
+
+/* ---------- Layout ---------- */
+
+.content {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 24px 24px 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.sectionTitle {
+    margin: 0;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #a3927a;
+}
+
+/* ---------- Card (blob suave) ---------- */
+
+.card {
+    background: linear-gradient(160deg, #fffdf8 0%, #f4ecdc 100%);
+    border-radius: 42px 58px 46px 54px / 54px 46px 58px 42px;
+    padding: 30px;
+    box-shadow: 0 18px 36px rgba(140, 110, 70, 0.14);
+    border: 1px solid rgba(199, 143, 99, 0.15);
+}
+
+/* ---------- Buttons ---------- */
+
+.buttonGroup {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.button {
+    padding: 15px 32px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #fff8f0;
+    border: none;
+    border-radius: 40px 60px 45px 55px / 55px 45px 60px 40px;
+    background: linear-gradient(150deg, #e0a878 0%, #c1794a 100%);
+    box-shadow: 0 12px 22px rgba(193, 121, 74, 0.4);
+    cursor: pointer;
+    transition:
+        transform 0.2s ease,
+        border-radius 0.3s ease,
+        box-shadow 0.2s ease;
+}
+
+.button:hover {
+    transform: translateY(-3px) rotate(-0.5deg);
+    border-radius: 55px 45px 60px 40px / 40px 60px 45px 55px;
+}
+
+.button:active {
+    transform: translateY(1px);
+    box-shadow: 0 6px 14px rgba(193, 121, 74, 0.35);
+}
+
+.buttonSecondary {
+    padding: 15px 32px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #6b7a52;
+    border: 1px solid rgba(107, 133, 82, 0.35);
+    border-radius: 40px 60px 45px 55px / 55px 45px 60px 40px;
+    background: linear-gradient(150deg, #f5f2e6 0%, #e9e4d0 100%);
+    box-shadow: 0 8px 16px rgba(140, 110, 70, 0.12);
+    cursor: pointer;
+    transition:
+        transform 0.2s ease,
+        border-radius 0.3s ease,
+        box-shadow 0.2s ease;
+}
+
+.buttonSecondary:hover {
+    transform: translateY(-3px) rotate(0.5deg);
+    border-radius: 55px 45px 60px 40px / 40px 60px 45px 55px;
+}
+
+.buttonSecondary:active {
+    transform: translateY(1px);
+    box-shadow: 0 4px 10px rgba(140, 110, 70, 0.1);
+}
+
+/* ---------- Card text ---------- */
+
+.cardTitle {
+    margin: 0 0 10px;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #6b4f3a;
+}
+
+.cardText {
+    margin: 0;
+    font-size: 0.92rem;
+    color: #8a7862;
+    line-height: 1.6;
+}
+
+/* ---------- Label / Input ---------- */
+
+.label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #8a7862;
+}
+
+.input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px 22px;
+    font-size: 0.95rem;
+    color: #4a3f35;
+    border: 1.5px solid rgba(199, 143, 99, 0.35);
+    border-radius: 30px 40px 30px 40px / 40px 30px 40px 30px;
+    background: #fffdf8;
+    box-shadow: inset 0 2px 6px rgba(140, 110, 70, 0.08);
+    outline: none;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.input::placeholder {
+    color: #b8a88f;
+}
+
+.input:focus {
+    border-color: #c1794a;
+    box-shadow:
+        inset 0 2px 6px rgba(140, 110, 70, 0.08),
+        0 0 0 3px rgba(193, 121, 74, 0.18);
+}
+
+/* ---------- Checkbox ---------- */
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #6b4f3a;
+    cursor: pointer;
+}
+
+.checkbox input[type="checkbox"] {
+    appearance: none;
+    width: 28px;
+    height: 28px;
+    margin: 0;
+    border-radius: 40% 60% 55% 45% / 50% 45% 55% 50%;
+    background: #f2ead8;
+    border: 1.5px solid rgba(199, 143, 99, 0.4);
+    cursor: pointer;
+    position: relative;
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.checkbox input[type="checkbox"]:checked {
+    background: linear-gradient(150deg, #e0a878 0%, #c1794a 100%);
+    border-color: #c1794a;
+}
+
+.checkbox input[type="checkbox"]:checked::after {
+    content: "";
+    position: absolute;
+    left: 8px;
+    top: 4px;
+    width: 6px;
+    height: 12px;
+    border: solid #fff8f0;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* ---------- Toggle ---------- */
+
+.toggle {
+    display: inline-block;
+    position: relative;
+    width: 58px;
+    height: 32px;
+    cursor: pointer;
+}
+
+.toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggleSlider {
+    position: absolute;
+    inset: 0;
+    border-radius: 50px 30px 50px 30px / 30px 50px 30px 50px;
+    background: #ece4d0;
+    border: 1.5px solid rgba(199, 143, 99, 0.3);
+    transition:
+        background 0.3s ease,
+        border-radius 0.3s ease;
+}
+
+.toggleSlider::before {
+    content: "";
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    width: 22px;
+    height: 22px;
+    border-radius: 55% 45% 50% 50% / 50% 55% 45% 50%;
+    background: linear-gradient(150deg, #fffdf8 0%, #f0e7d3 100%);
+    box-shadow: 0 3px 6px rgba(140, 110, 70, 0.25);
+    transition: transform 0.3s ease;
+}
+
+.toggle input:checked + .toggleSlider {
+    background: linear-gradient(150deg, #e0a878 0%, #c1794a 100%);
+    border-color: #c1794a;
+    border-radius: 30px 50px 30px 50px / 50px 30px 50px 30px;
+}
+
+.toggle input:checked + .toggleSlider::before {
+    transform: translateX(26px);
+}
+
+/* ---------- Badge ---------- */
+
+.badge {
+    display: inline-block;
+    padding: 8px 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #fff8f0;
+    background: linear-gradient(150deg, #9bb478 0%, #6b8752 100%);
+    border-radius: 40% 60% 55% 45% / 55% 45% 60% 40%;
+    box-shadow: 0 8px 16px rgba(107, 135, 82, 0.35);
+}
+
+/* ---------- Alert ---------- */
+
+.alert {
+    padding: 22px 26px;
+    border-radius: 36px 54px 40px 50px / 50px 40px 54px 36px;
+    background: linear-gradient(150deg, #f6e9c9 0%, #edd9a5 100%);
+    border: 1px solid rgba(200, 160, 80, 0.25);
+    box-shadow: 0 14px 26px rgba(190, 150, 70, 0.18);
+}
+
+.alertTitle {
+    display: block;
+    margin-bottom: 6px;
+    color: #7a5a1c;
+    font-size: 0.95rem;
+}
+
+.alertText {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #8f7638;
+}
+
+/* ---------- Progress ---------- */
+
+.progress {
+    width: 100%;
+    height: 20px;
+    border-radius: 999px;
+    background: #ece4d0;
+    border: 1px solid rgba(199, 143, 99, 0.25);
+    overflow: hidden;
+}
+
+.progressBar {
+    width: 62%;
+    height: 100%;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #9bb478 0%, #c1794a 100%);
+}
+
+/* ---------- Select ---------- */
+
+.select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px 22px;
+    font-size: 0.95rem;
+    color: #4a3f35;
+    border: 1.5px solid rgba(199, 143, 99, 0.35);
+    border-radius: 30px 40px 30px 40px / 40px 30px 40px 30px;
+    background:
+        linear-gradient(45deg, transparent 50%, #8a7862 50%) calc(100% - 22px)
+            center / 6px 6px no-repeat,
+        linear-gradient(135deg, #8a7862 50%, transparent 50%) calc(100% - 16px)
+            center / 6px 6px no-repeat,
+        #fffdf8;
+    box-shadow: inset 0 2px 6px rgba(140, 110, 70, 0.08);
+    appearance: none;
+    cursor: pointer;
+}
+
+/* ---------- Modal ---------- */
+
+.modal {
+    max-width: 420px;
+    margin: 0 auto;
+    padding: 34px;
+    border-radius: 50px 70px 55px 65px / 65px 55px 70px 50px;
+    background: linear-gradient(160deg, #fffdf8 0%, #f4ecdc 100%);
+    border: 1px solid rgba(199, 143, 99, 0.18);
+    box-shadow: 0 26px 46px rgba(140, 110, 70, 0.2);
+}
+
+.modalTitle {
+    margin: 0 0 12px;
+    color: #6b4f3a;
+    font-weight: 700;
+}
+
+.modalText {
+    margin: 0 0 24px;
+    font-size: 0.92rem;
+    color: #8a7862;
+    line-height: 1.6;
+}
+
+.modalActions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 14px;
+}
+
+/* ---------- Tooltip ---------- */
+
+.tooltip {
+    position: relative;
+    padding: 12px 26px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #6b4f3a;
+    border: 1px solid rgba(199, 143, 99, 0.3);
+    border-radius: 30px 45px 32px 42px / 42px 32px 45px 30px;
+    background: linear-gradient(150deg, #fffdf8 0%, #f2ead8 100%);
+    box-shadow: 0 8px 16px rgba(140, 110, 70, 0.12);
+    cursor: pointer;
+}
+
+.tooltipText {
+    position: absolute;
+    bottom: calc(100% + 12px);
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    padding: 8px 16px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #fff8f0;
+    background: #6b4f3a;
+    border-radius: 20px 26px 22px 24px / 24px 22px 26px 20px;
+    box-shadow: 0 6px 14px rgba(107, 79, 58, 0.35);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+}
+
+.tooltipText::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: #6b4f3a;
+}
+
+.tooltip:hover .tooltipText {
+    opacity: 1;
+}
+
+/* ---------- Pagination ---------- */
+
+.pagination {
+    display: flex;
+    gap: 12px;
+}
+
+.pageButton {
+    width: 44px;
+    height: 44px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #6b4f3a;
+    border: 1px solid rgba(199, 143, 99, 0.3);
+    border-radius: 45% 55% 50% 50% / 50% 45% 55% 50%;
+    background: linear-gradient(150deg, #fffdf8 0%, #f2ead8 100%);
+    box-shadow: 0 8px 16px rgba(140, 110, 70, 0.12);
+    cursor: pointer;
+    transition:
+        transform 0.2s ease,
+        border-radius 0.3s ease;
+}
+
+.pageButton:hover {
+    transform: translateY(-2px);
+    border-radius: 55% 45% 50% 50% / 50% 55% 45% 50%;
+}
+
+.pageButton:active {
+    transform: translateY(1px);
+}
+
+/* ---------- Footer ---------- */
+
+.footer {
+    text-align: center;
+    padding: 28px;
+    font-size: 0.85rem;
+    color: #a3927a;
+}

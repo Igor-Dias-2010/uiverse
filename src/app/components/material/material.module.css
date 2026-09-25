@@ -1,0 +1,500 @@
+.page {
+    min-height: 100vh;
+    min-width: 100vw;
+    background: #f4f3f7;
+    font-family: "Roboto", "Segoe UI", Arial, sans-serif;
+    color: #1c1b1f;
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+    text-align: center;
+    padding: 56px 24px 40px;
+    background: #ffffff;
+    box-shadow:
+        0 1px 3px rgba(0, 0, 0, 0.12),
+        0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.title {
+    margin: 0 0 10px;
+    font-size: 2.4rem;
+    font-weight: 500;
+    color: #1c1b1f;
+    letter-spacing: -0.5px;
+}
+
+.description {
+    margin: 0;
+    font-size: 1rem;
+    color: #49454f;
+}
+
+/* ---------- Layout ---------- */
+
+.content {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 32px 24px 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.sectionTitle {
+    margin: 0;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: #6200ee;
+}
+
+/* ---------- Card (surface, elevation 1) ---------- */
+
+.card {
+    background: #ffffff;
+    border-radius: 4px;
+    padding: 20px;
+    box-shadow:
+        0 1px 3px rgba(0, 0, 0, 0.12),
+        0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+/* ---------- Buttons ---------- */
+
+.buttonGroup {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.button {
+    position: relative;
+    padding: 10px 24px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    background: #6200ee;
+    box-shadow:
+        0 3px 1px -2px rgba(0, 0, 0, 0.2),
+        0 2px 2px rgba(0, 0, 0, 0.14),
+        0 1px 5px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    overflow: hidden;
+    transition:
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.button::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #ffffff;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+}
+
+.button:hover::after {
+    opacity: 0.08;
+}
+
+.button:active::after {
+    opacity: 0.16;
+}
+
+.button:active {
+    box-shadow:
+        0 5px 5px -3px rgba(0, 0, 0, 0.2),
+        0 8px 10px 1px rgba(0, 0, 0, 0.14),
+        0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+.buttonSecondary {
+    position: relative;
+    padding: 10px 24px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #6200ee;
+    border: none;
+    border-radius: 4px;
+    background: transparent;
+    cursor: pointer;
+    overflow: hidden;
+    transition: background 0.2s ease;
+}
+
+.buttonSecondary::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #6200ee;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+}
+
+.buttonSecondary:hover::after {
+    opacity: 0.08;
+}
+
+.buttonSecondary:active::after {
+    opacity: 0.16;
+}
+
+/* ---------- Card text ---------- */
+
+.cardTitle {
+    margin: 0 0 10px;
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: #1c1b1f;
+}
+
+.cardText {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #49454f;
+    line-height: 1.6;
+}
+
+/* ---------- Label / Input ---------- */
+
+.label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.4px;
+    color: #49454f;
+}
+
+.input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px 10px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    color: #1c1b1f;
+    border: none;
+    border-bottom: 1px solid #79747e;
+    border-radius: 4px 4px 0 0;
+    background: #f4f3f7;
+    outline: none;
+    transition:
+        border-bottom-color 0.2s ease,
+        border-bottom-width 0.2s ease;
+}
+
+.input::placeholder {
+    color: #79747e;
+}
+
+.input:focus {
+    border-bottom: 2px solid #6200ee;
+    padding-bottom: 9px;
+}
+
+/* ---------- Checkbox ---------- */
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.95rem;
+    color: #1c1b1f;
+    cursor: pointer;
+}
+
+.checkbox input[type="checkbox"] {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    border: 2px solid #79747e;
+    border-radius: 2px;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    transition:
+        background 0.15s ease,
+        border-color 0.15s ease;
+}
+
+.checkbox input[type="checkbox"]:checked {
+    background: #6200ee;
+    border-color: #6200ee;
+}
+
+.checkbox input[type="checkbox"]:checked::after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 1px;
+    width: 4px;
+    height: 8px;
+    border: solid #ffffff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* ---------- Toggle (Material switch) ---------- */
+
+.toggle {
+    display: inline-block;
+    position: relative;
+    width: 40px;
+    height: 22px;
+    cursor: pointer;
+}
+
+.toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggleSlider {
+    position: absolute;
+    inset: 0;
+    top: 3px;
+    height: 16px;
+    border-radius: 999px;
+    background: #79747e;
+    opacity: 0.5;
+    transition:
+        background 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.toggleSlider::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -3px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fafafa;
+    box-shadow:
+        0 2px 2px rgba(0, 0, 0, 0.2),
+        0 1px 4px rgba(0, 0, 0, 0.14);
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+.toggle input:checked + .toggleSlider {
+    background: #6200ee;
+    opacity: 0.5;
+}
+
+.toggle input:checked + .toggleSlider::before {
+    background: #6200ee;
+    transform: translateX(18px);
+}
+
+/* ---------- Badge (chip) ---------- */
+
+.badge {
+    display: inline-block;
+    padding: 5px 14px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    color: #ffffff;
+    background: #018786;
+    border-radius: 999px;
+}
+
+/* ---------- Alert (banner) ---------- */
+
+.alert {
+    padding: 16px 20px;
+    border-radius: 4px;
+    background: #ffffff;
+    border-left: 4px solid #b00020;
+    box-shadow:
+        0 1px 3px rgba(0, 0, 0, 0.12),
+        0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.alertTitle {
+    display: block;
+    margin-bottom: 4px;
+    color: #b00020;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.alertText {
+    margin: 0;
+    font-size: 0.875rem;
+    color: #49454f;
+}
+
+/* ---------- Progress (linear indicator) ---------- */
+
+.progress {
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background: #e7d9fb;
+    overflow: hidden;
+}
+
+.progressBar {
+    width: 62%;
+    height: 100%;
+    background: #6200ee;
+}
+
+/* ---------- Select ---------- */
+
+.select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px 10px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    color: #1c1b1f;
+    border: none;
+    border-bottom: 1px solid #79747e;
+    border-radius: 4px 4px 0 0;
+    background:
+        linear-gradient(45deg, transparent 50%, #49454f 50%) calc(100% - 18px)
+            center / 6px 6px no-repeat,
+        linear-gradient(135deg, #49454f 50%, transparent 50%) calc(100% - 12px)
+            center / 6px 6px no-repeat,
+        #f4f3f7;
+    appearance: none;
+    cursor: pointer;
+    transition: border-bottom-color 0.2s ease;
+}
+
+.select:focus {
+    border-bottom: 2px solid #6200ee;
+    outline: none;
+}
+
+/* ---------- Modal (dialog, elevação alta) ---------- */
+
+.modal {
+    max-width: 420px;
+    margin: 0 auto;
+    padding: 24px;
+    border-radius: 4px;
+    background: #ffffff;
+    box-shadow:
+        0 11px 15px -7px rgba(0, 0, 0, 0.2),
+        0 24px 38px 3px rgba(0, 0, 0, 0.14),
+        0 9px 46px 8px rgba(0, 0, 0, 0.12);
+}
+
+.modalTitle {
+    margin: 0 0 12px;
+    color: #1c1b1f;
+    font-weight: 500;
+    font-size: 1.25rem;
+}
+
+.modalText {
+    margin: 0 0 24px;
+    font-size: 0.9rem;
+    color: #49454f;
+    line-height: 1.6;
+}
+
+.modalActions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+/* ---------- Tooltip ---------- */
+
+.tooltip {
+    position: relative;
+    padding: 10px 20px;
+    font-size: 0.875rem;
+    color: #1c1b1f;
+    border: 1px solid #79747e;
+    border-radius: 4px;
+    background: transparent;
+    cursor: pointer;
+}
+
+.tooltipText {
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    padding: 6px 10px;
+    font-size: 0.75rem;
+    color: #ffffff;
+    background: #313033;
+    border-radius: 4px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s ease;
+}
+
+.tooltip:hover .tooltipText {
+    opacity: 0.95;
+}
+
+/* ---------- Pagination ---------- */
+
+.pagination {
+    display: flex;
+    gap: 4px;
+}
+
+.pageButton {
+    width: 36px;
+    height: 36px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #49454f;
+    border: none;
+    border-radius: 50%;
+    background: transparent;
+    cursor: pointer;
+    transition:
+        background 0.15s ease,
+        color 0.15s ease;
+}
+
+.pageButton:hover {
+    background: rgba(98, 0, 238, 0.08);
+    color: #6200ee;
+}
+
+.pageButton:active {
+    background: rgba(98, 0, 238, 0.16);
+}
+
+/* ---------- Footer ---------- */
+
+.footer {
+    text-align: center;
+    padding: 24px;
+    font-size: 0.8rem;
+    color: #79747e;
+    background: #ffffff;
+}
