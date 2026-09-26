@@ -1,0 +1,166 @@
+import styles from "./pixel.module.css";
+
+import Navbar from "@/app/navbar";
+
+export default function PixelUI() {
+    return (
+        <div className={styles.page}>
+            <Navbar />
+
+            <header className={styles.hero}>
+                <p className={styles.eyebrow}>UIVERSE / PIXEL</p>
+                <h1>Pixel UI</h1>
+                <p>
+                    Uma interface inspirada em jogos retrô, gráficos pixelados
+                    e interfaces clássicas de videogames.
+                </p>
+            </header>
+
+            <main className={styles.content}>
+                <section className={styles.section}>
+                    <h2>Botões</h2>
+
+                    <div className={styles.buttons}>
+                        <button className={styles.primaryButton}>
+                            Jogar
+                        </button>
+
+                        <button className={styles.secondaryButton}>
+                            Cancelar
+                        </button>
+                    </div>
+                </section>
+
+                <section className={styles.section}>
+                    <h2>Card</h2>
+
+                    <div className={styles.card}>
+                        <p className={styles.cardCategory}>
+                            PIXEL / GAME
+                        </p>
+
+                        <h3 className={styles.cardTitle}>
+                            Card de Pixel UI
+                        </h3>
+
+                        <p className={styles.cardText}>
+                            Essa é uma demonstração de texto em Pixel UI.
+                        </p>
+                    </div>
+                </section>
+
+                <section className={styles.section}>
+                    <h2>Input</h2>
+
+                    <input
+                        className={styles.input}
+                        type="text"
+                        placeholder="Digite seu nome..."
+                    />
+                </section>
+
+                <section className={styles.section}>
+                    <h2>Checkbox</h2>
+
+                    <label className={styles.checkbox}>
+                        <input type="checkbox" />
+                        <span>Opção selecionada</span>
+                    </label>
+                </section>
+
+                <section className={styles.section}>
+                    <h2>Toggle</h2>
+
+                    <label className={styles.toggle}>
+                        <input type="checkbox" />
+                        <span></span>
+                    </label>
+                </section>
+
+                <section className={styles.section}>
+                    <h2>Badge</h2>
+
+                    <span className={styles.badge}>PLAYER 1</span>
+                </section>
+
+                <section className={styles.section}>
+                    <h2>Alert</h2>
+
+                    <div className={styles.alert}>
+                        <strong>GAME MESSAGE</strong>
+
+                        <p>
+                            Essa é uma mensagem de exemplo dentro do jogo.
+                        </p>
+                    </div>
+                </section>
+
+                <section className={styles.section}>
+                    <h2>Progress Bar</h2>
+
+                    <div className={styles.progress}>
+                        <div className={styles.progressBar}></div>
+                    </div>
+                </section>
+
+                <section className={styles.section}>
+                    <h2>Select</h2>
+
+                    <select className={styles.select}>
+                        <option>Selecione uma opção</option>
+                        <option>Opção 1</option>
+                        <option>Opção 2</option>
+                        <option>Opção 3</option>
+                    </select>
+                </section>
+
+                <section className={styles.section}>
+                    <h2>Modal</h2>
+
+                    <div className={styles.modal}>
+                        <p className={styles.modalCategory}>
+                            PIXEL / GAME
+                        </p>
+
+                        <h3>Pixel Modal</h3>
+
+                        <p>
+                            Essa é uma demonstração de uma janela modal.
+                        </p>
+
+                        <button className={styles.primaryButton}>
+                            Fechar
+                        </button>
+                    </div>
+                </section>
+
+                <section className={styles.section}>
+                    <h2>Tooltip</h2>
+
+                    <button
+                        className={styles.tooltip}
+                        title="Esse é um tooltip Pixel"
+                    >
+                        Passe o mouse
+                    </button>
+                </section>
+
+                <section className={styles.section}>
+                    <h2>Pagination</h2>
+
+                    <div className={styles.pagination}>
+                        <button>&lt;</button>
+                        <button className={styles.activePage}>1</button>
+                        <button>2</button>
+                        <button>3</button>
+                        <button>&gt;</button>
+                    </div>
+                </section>
+            </main>
+
+            <footer className={styles.footer}>
+                <p>UIVerse • Pixel UI</p>
+            </footer>
+        </div>
+    );
+}

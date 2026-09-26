@@ -45,6 +45,27 @@ export default function Page() {
                 <Link href={"/components/editorial"} className="styles">
                     Editorial
                 </Link>
+                <Link href={"/components/terminal"} className="styles">
+                    Terminal
+                </Link>
+                <Link href={"/components/cyberpunk"} className="styles">
+                    Cyberpunk
+                </Link>
+                <Link href={"/components/scifi"} className="styles">
+                    Sci-Fi
+                </Link>
+                <Link href={"/components/retroFuturistic"} className="styles">
+                    Retro-futuristic
+                </Link>
+                <Link href={"/components/monochrome"} className="styles">
+                    Monochrome
+                </Link>
+                <Link href={"/components/gradient"} className="styles">
+                    Gradient
+                </Link>
+                <Link href={"/components/pixel"} className="styles">
+                    Pixel
+                </Link>
             </div>
             <Footer />
         </div>
